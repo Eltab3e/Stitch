@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { CiSearch, CiUser, CiShop } from "react-icons/ci";
 
+import { navLinks } from "../../constants/constants";
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -86,43 +88,23 @@ const Navbar = () => {
             </Notification>
 
             <Nav>
-                <StyledNavLink to="/">
+                <NavLink to="/">
                     <Title>STITCH.</Title>
-                </StyledNavLink>
+                </NavLink>
 
                 <List>
-                    <li>
-                        <StyledNavLink
-                            to="/"
-                            activeclassname="active"
-                        >
-                            <Content>Home</Content>
-                        </StyledNavLink>
-                    </li>
-                    <li>
-                        <StyledNavLink
-                            to="/category/:id"
-                            activeclassname="active"
-                        >
-                            <Content>Category</Content>
-                        </StyledNavLink>
-                    </li>
-                    <li>
-                        <StyledNavLink
-                            to="/product/:id"
-                            activeclassname="active"
-                        >
-                            <Content>Products</Content>
-                        </StyledNavLink>
-                    </li>
-                    <li>
-                        <StyledNavLink
-                            to="/about"
-                            activeclassname="active"
-                        >
-                            <Content>About</Content>
-                        </StyledNavLink>
-                    </li>
+                    {navLinks.map((navLink) => (
+                        <li key={navLink.id}>
+                            <StyledNavLink
+                                to={navLink.url}
+                                activeclassname="active"
+                            >
+                                <Content>
+                                    {navLink.id}. {navLink.title}
+                                </Content>
+                            </StyledNavLink>
+                        </li>
+                    ))}
                 </List>
 
                 <NavIcons>

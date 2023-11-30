@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Home, Category, Product, About } from "./pages/index";
-import { Navbar, Footer } from "./components/index";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
 import theme from "./theme/theme";
+import { Navbar, Footer } from "./components/index";
+import { Home, Category, Product, About } from "./pages/index";
 
 const Layout = () => {
     return (
