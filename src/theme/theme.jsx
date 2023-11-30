@@ -21,14 +21,13 @@ const theme = {
         },
     },
     fontSizes: {
-        hero: "2.6rem",
-        h1: "2.4rem",
-        h2: "2.2rem",
-        h3: "2rem",
-        h4: "1.8rem",
-        h5: "1.6rem",
-        h6: "1.4rem",
-        small: "1.2rem",
+        h1: "2.6rem",
+        h2: "2.4rem",
+        h3: "2.2rem",
+        h4: "2.0rem",
+        h5: "1.8rem",
+        h6: "1.6rem",
+        base: "1.2rem",
     },
 };
 

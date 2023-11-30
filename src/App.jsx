@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Home, Category, Product } from "./pages/index";
+import { Home, Category, Product, About } from "./pages/index";
 import { Navbar, Footer } from "./components/index";
 import theme from "./theme/theme";
 
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <Product />,
+            },
+            {
+                path: "/about",
+                element: <About />,
             },
         ],
     },
