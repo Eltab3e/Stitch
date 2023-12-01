@@ -1,11 +1,19 @@
-import React from "react";
-import Slider from "../../components/Slider/Slider";
+import styled from "styled-components";
+
+import { Slider, Slang } from "../../components/index";
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+`;
 
 const Home = () => {
     return (
-        <div>
+        <Container>
             <Slider />
-        </div>
+            <Slang />
+        </Container>
     );
 };
 

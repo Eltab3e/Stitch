@@ -21,7 +21,7 @@ const theme = {
         },
     },
     fontSizes: {
-        hero: "4.5rem",
+        hero: "7.2rem",
         h1: "2.6rem",
         h2: "2.4rem",
         h3: "2.2rem",
