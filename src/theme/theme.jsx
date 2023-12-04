@@ -27,7 +27,7 @@ const theme = {
             s2: "7.2rem",
             s3: "5.4rem",
             s4: "4rem",
-            s5: "3.8rem",
+            s5: "3.4rem",
             s6: "2.8rem",
             s7: "2rem",
         },
