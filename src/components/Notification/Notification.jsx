@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    background-color: ${(props) => props.theme.colors.neutral.two};
+    background-color: ${(props) => props.theme.colors.neutral.three};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ const Text = styled.div`
 const Notification = () => {
     return (
         <Container>
-            <Text>🇵🇸 FREE PALESTINE! 🇵🇸</Text>
+            <Text>🇵🇸&nbsp; FREE PALESTINE! &nbsp;🇵🇸</Text>
         </Container>
     );
 };

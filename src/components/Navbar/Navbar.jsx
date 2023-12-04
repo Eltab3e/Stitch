@@ -5,6 +5,8 @@ import { CiSearch, CiUser, CiShop } from "react-icons/ci";
 import { navLinks } from "../../constants/constants";
 
 const Container = styled.div`
+    background-color: ${(props) => props.theme.colors.primary.black};
+    color: ${(props) => props.theme.colors.neutral.one};
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,7 +19,11 @@ const Logo = styled.div`
 `;
 
 const Title = styled.h2`
-    font-size: ${(props) => props.theme.fontSizes.headings.s6};
+    font-size: ${(props) => props.theme.fontSizes.headings.s5};
+
+    &:hover {
+        color: ${(props) => props.theme.colors.secondary.orange};
+    }
 `;
 
 const Nav = styled.nav``;
@@ -29,15 +35,19 @@ const Items = styled.ul`
 `;
 
 const StyledNavLink = styled(NavLink)`
-    color: ${(props) => props.theme.colors.neutral.four};
+    color: ${(props) => props.theme.colors.neutral.two};
+
+    &:hover {
+        color: ${(props) => props.theme.colors.secondary.orange};
+    }
 
     &.active {
-        color: ${(props) => props.theme.colors.primary.black};
+        color: ${(props) => props.theme.colors.secondary.orange};
     }
 `;
 
 const Item = styled.li`
-    font-size: ${(props) => props.theme.fontSizes.body.c1};
+    font-size: ${(props) => props.theme.fontSizes.body.b2};
     font-weight: 500;
 `;
 
@@ -50,6 +60,10 @@ const Icon = styled.div`
     font-size: ${(props) => props.theme.fontSizes.headings.s6};
     display: flex;
     cursor: pointer;
+
+    &:hover {
+        color: ${(props) => props.theme.colors.secondary.orange};
+    }
 `;
 
 const Cart = styled.div`
