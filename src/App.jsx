@@ -2,13 +2,14 @@ import { ThemeProvider } from "styled-components";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import theme from "./theme/theme";
-import { Navbar, Footer } from "./components/index";
+import { Navbar, Footer, Notification } from "./components/index";
 import { Home, Category, Product, About } from "./pages/index";
 
 const Layout = () => {
     return (
         <ThemeProvider theme={theme}>
             <div className="app">
+                <Notification />
                 <Navbar />
                 <Outlet />
                 <Footer />

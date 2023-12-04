@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 62.5%;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 * {
@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 
-/* FONTS */
-/* font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Space Grotesk', sans-serif; */
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/

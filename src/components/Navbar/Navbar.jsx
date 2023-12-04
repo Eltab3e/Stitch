@@ -6,32 +6,26 @@ import { navLinks } from "../../constants/constants";
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
-`;
-
-const Title = styled.h1`
-    font-size: ${(props) => props.theme.fontSizes.h1};
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0.5rem;
-`;
-
-const Content = styled.h5`
-    font-size: ${(props) => props.theme.fontSizes.h5};
-    font-weight: 400;
-`;
-
-const Notification = styled.div`
-    background-color: ${(props) => props.theme.colors.neutral.two};
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-`;
-
-const Nav = styled.nav`
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.6rem 16rem;
+    height: 6rem;
+`;
+
+const Logo = styled.div`
+    font-family: "Poppins", sans-serif;
+`;
+
+const Title = styled.h2`
+    font-size: ${(props) => props.theme.fontSizes.headings.s6};
+`;
+
+const Nav = styled.nav``;
+
+const Items = styled.ul`
+    display: flex;
+    gap: 4rem;
+    list-style: none;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -42,21 +36,19 @@ const StyledNavLink = styled(NavLink)`
     }
 `;
 
-const List = styled.ul`
-    display: flex;
-    gap: 5rem;
-    list-style: none;
+const Item = styled.li`
+    font-size: ${(props) => props.theme.fontSizes.body.c1};
+    font-weight: 500;
 `;
 
-const NavIcons = styled.div`
-    font-size: ${(props) => props.theme.fontSizes.h2};
+const Icons = styled.div`
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
 `;
 
 const Icon = styled.div`
+    font-size: ${(props) => props.theme.fontSizes.headings.s6};
     display: flex;
-    align-items: center;
     cursor: pointer;
 `;
 
@@ -67,7 +59,7 @@ const Cart = styled.div`
 
 const Span = styled.span`
     background-color: ${(props) => props.theme.colors.secondary.blue};
-    font-size: ${(props) => props.theme.fontSizes.base};
+    font-size: ${(props) => props.theme.fontSizes.body.c2};
     color: white;
     position: absolute;
     display: flex;
@@ -83,45 +75,41 @@ const Span = styled.span`
 const Navbar = () => {
     return (
         <Container>
-            <Notification>
-                <Content>🇵🇸 FREE PALESTINE! 🇵🇸</Content>
-            </Notification>
-
-            <Nav>
+            <Logo>
                 <NavLink to="/">
                     <Title>STITCH.</Title>
                 </NavLink>
+            </Logo>
 
-                <List>
+            <Nav>
+                <Items>
                     {navLinks.map((navLink) => (
-                        <li key={navLink.id}>
+                        <Item key={navLink.id}>
                             <StyledNavLink
                                 to={navLink.url}
                                 activeclassname="active"
                             >
-                                <Content>
-                                    {navLink.id}. {navLink.title}
-                                </Content>
+                                {navLink.id}. {navLink.title}
                             </StyledNavLink>
-                        </li>
+                        </Item>
                     ))}
-                </List>
-
-                <NavIcons>
-                    <Icon>
-                        <CiSearch />
-                    </Icon>
-                    <Icon>
-                        <CiUser />
-                    </Icon>
-                    <Icon>
-                        <Cart>
-                            <CiShop />
-                            <Span>0</Span>
-                        </Cart>
-                    </Icon>
-                </NavIcons>
+                </Items>
             </Nav>
+
+            <Icons>
+                <Icon>
+                    <CiSearch />
+                </Icon>
+                <Icon>
+                    <CiUser />
+                </Icon>
+                <Icon>
+                    <Cart>
+                        <CiShop />
+                        <Span>0</Span>
+                    </Cart>
+                </Icon>
+            </Icons>
         </Container>
     );
 };

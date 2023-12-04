@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Slider, Slang } from "../../components/index";
+import { Slider, Slang, Banner } from "../../components/index";
 
 const Container = styled.div`
     display: flex;
@@ -13,6 +13,7 @@ const Home = () => {
         <Container>
             <Slider />
             <Slang />
+            <Banner />
         </Container>
     );
 };
