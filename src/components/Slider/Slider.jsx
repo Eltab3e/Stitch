@@ -22,19 +22,19 @@ const Image = styled.img`
     height: 100%;
     object-fit: cover;
 `;
-const IconsWrapper = styled.div`
+const Icons = styled.div`
     position: absolute;
     margin: auto;
     display: flex;
     width: fit-content;
     gap: 1rem;
-    bottom: 100px;
+    bottom: 15rem;
     left: 0;
     right: 0;
 `;
 
 const Icon = styled.div`
-    font-size: ${(props) => props.theme.fontSizes.h6};
+    font-size: ${(props) => props.theme.fontSizes.body.b2};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,14 +72,14 @@ const Slider = () => {
                 ))}
             </Wrapper>
 
-            <IconsWrapper>
+            <Icons>
                 <Icon onClick={prevSlide}>
                     <FaArrowLeft />
                 </Icon>
                 <Icon onClick={nextSlide}>
                     <FaArrowRight />
                 </Icon>
-            </IconsWrapper>
+            </Icons>
         </Container>
     );
 };

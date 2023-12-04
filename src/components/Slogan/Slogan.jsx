@@ -7,17 +7,20 @@ const Container = styled.div`
     padding: 0 16rem;
 `;
 
-const Main = styled.div`
+const Main = styled.div``;
+
+const Title = styled.h1`
     font-family: "Poppins", sans-serif;
-    font-size: ${(props) => props.theme.fontSizes.hero};
+    font-size: ${(props) => props.theme.fontSizes.headings.hero};
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: -2px;
 `;
 
-const Sub = styled.div`
-    color: ${(props) => props.theme.colors.neutral.four};
-    font-size: ${(props) => props.theme.fontSizes.h4};
+const Sub = styled.div``;
+
+const Text = styled.p`
+    font-size: ${(props) => props.theme.fontSizes.body.b2};
     font-weight: 400;
 `;
 
@@ -29,12 +32,21 @@ const Slogan = () => {
     return (
         <Container>
             <Main>
-                Simply Unique<Shape>/</Shape> <br /> Simply Better<Shape>.</Shape>
+                <Title>
+                    Simply Unique<Shape>/</Shape> <br /> Simply Better<Shape>.</Shape>
+                </Title>
             </Main>
+
             <Sub>
-                STITCH is a clothes, gifts & decorations store based online with worldwide shipping,
-                <br />
-                Est since 2023.
+                <Text>
+                    STITCH&nbsp;
+                    <Shape>
+                        is a clothes, gifts & decorations store based online with worldwide
+                        shipping,
+                        <br />
+                        Est since 2023.
+                    </Shape>
+                </Text>
             </Sub>
         </Container>
     );
