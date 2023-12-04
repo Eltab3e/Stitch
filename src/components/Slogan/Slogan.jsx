@@ -25,7 +25,7 @@ const Shape = styled.span`
     color: ${(props) => props.theme.colors.neutral.four};
 `;
 
-const Slang = () => {
+const Slogan = () => {
     return (
         <Container>
             <Main>
@@ -40,4 +40,4 @@ const Slang = () => {
     );
 };
 
-export default Slang;
+export default Slogan;

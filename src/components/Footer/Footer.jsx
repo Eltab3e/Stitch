@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { IoLogoFacebook, IoLogoInstagram, IoLogoYoutube } from "react-icons/io5";
 
 import { navLinks } from "../../constants/constants";
 
@@ -9,27 +9,11 @@ const Container = styled.footer`
     color: ${(props) => props.theme.colors.neutral.one};
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4.9rem;
     padding: 8rem 16rem 3.2rem;
 `;
 
-const Title = styled.h1`
-    font-size: ${(props) => props.theme.fontSizes.h1};
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 0.5rem;
-`;
-
-const Links = styled.h5`
-    font-size: ${(props) => props.theme.fontSizes.h5};
-    font-weight: 400;
-`;
-
-const Content = styled.h6`
-    font-size: ${(props) => props.theme.fontSizes.h6};
-    font-weight: 400;
-`;
-
-const Top = styled.div`
+const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,28 +21,67 @@ const Top = styled.div`
 
 const Info = styled.div`
     display: flex;
-    align-items: center;
-    gap: 5rem;
+    gap: 3.2rem;
 `;
 
-const StyledNavLink = styled(NavLink)`
+const Logo = styled.div`
+    font-family: "Poppins", sans-serif;
+`;
+
+const Title = styled.h2`
+    font-size: ${(props) => props.theme.fontSizes.headings.s5};
+
     &:hover {
         color: ${(props) => props.theme.colors.secondary.orange};
     }
 `;
 
-const List = styled.ul`
+const Slogan = styled.div`
     display: flex;
-    gap: 5rem;
+    align-items: center;
+    gap: 3.2rem;
+`;
+
+const Line = styled.div`
+    height: 3rem;
+    border-left: 0.25rem solid #6c7275;
+`;
+
+const Desc = styled.h4`
+    font-size: ${(props) => props.theme.fontSizes.body.c1};
+    font-weight: 400;
+`;
+
+const Nav = styled.nav``;
+
+const Items = styled.ul`
+    display: flex;
+    gap: 4rem;
     list-style: none;
+`;
+
+const StyledNavLink = styled(NavLink)`
+    color: ${(props) => props.theme.colors.neutral.two};
+
+    &:hover {
+        color: ${(props) => props.theme.colors.secondary.orange};
+    }
+
+    &.active {
+        color: ${(props) => props.theme.colors.secondary.orange};
+    }
+`;
+
+const Item = styled.li`
+    font-size: ${(props) => props.theme.fontSizes.body.b2};
+    font-weight: 500;
 `;
 
 const Bottom = styled.div`
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-top: 1px solid gray;
     padding: 1.6rem 0;
+    border-top: 1px solid #6c7275;
 `;
 
 const Copyright = styled.div`
@@ -67,16 +90,16 @@ const Copyright = styled.div`
     gap: 3rem;
 `;
 
-const NavIcons = styled.div`
-    font-size: ${(props) => props.theme.fontSizes.h2};
+const Social = styled.div`
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
 `;
 
 const Icon = styled.div`
+    font-size: ${(props) => props.theme.fontSizes.headings.s6};
     display: flex;
-    align-items: center;
     cursor: pointer;
+
     &:hover {
         color: ${(props) => props.theme.colors.secondary.orange};
     }
@@ -85,57 +108,60 @@ const Icon = styled.div`
 const Footer = () => {
     return (
         <Container>
-            <Top>
+            <Content>
                 <Info>
-                    <StyledNavLink to="/">
-                        <Title>STITCH.</Title>
-                    </StyledNavLink>
-                    <Content>|</Content>
-                    <Content>Clothes, Gifts & Decorations Store.</Content>
+                    <Logo>
+                        <NavLink to="/">
+                            <Title>STITCH.</Title>
+                        </NavLink>
+                    </Logo>
+
+                    <Slogan>
+                        <Line />
+                        <Desc>Clothes, Gifts & Decorations Store.</Desc>
+                    </Slogan>
                 </Info>
 
-                <nav>
-                    <List>
+                <Nav>
+                    <Items>
                         {navLinks.map((navLink) => (
-                            <li key={navLink.id}>
+                            <Item key={navLink.id}>
                                 <StyledNavLink
                                     to={navLink.url}
                                     activeclassname="active"
                                 >
-                                    <Links>
-                                        {navLink.id}. {navLink.title}
-                                    </Links>
+                                    {navLink.id}. {navLink.title}
                                 </StyledNavLink>
-                            </li>
+                            </Item>
                         ))}
-                    </List>
-                </nav>
-            </Top>
+                    </Items>
+                </Nav>
+            </Content>
 
             <Bottom>
                 <Copyright>
-                    <Content>Copyright &copy; 2023 STITCH. All right reserved.</Content>
+                    <Desc>Copyright &copy; 2023 STITCH. All right reserved.</Desc>
 
-                    <StyledNavLink to="/">
-                        <Content>Privacy Policy</Content>
+                    <StyledNavLink to="/about">
+                        <Desc>Privacy Policy</Desc>
                     </StyledNavLink>
 
-                    <StyledNavLink to="/">
-                        <Content>Terms of Use</Content>
+                    <StyledNavLink to="/about">
+                        <Desc>Terms of Use</Desc>
                     </StyledNavLink>
                 </Copyright>
 
-                <NavIcons>
+                <Social>
                     <Icon>
-                        <FaFacebookF />
+                        <IoLogoFacebook />
                     </Icon>
                     <Icon>
-                        <FaInstagram />
+                        <IoLogoInstagram />
                     </Icon>
                     <Icon>
-                        <FaYoutube />
+                        <IoLogoYoutube />
                     </Icon>
-                </NavIcons>
+                </Social>
             </Bottom>
         </Container>
     );

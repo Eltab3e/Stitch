@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { CiSearch, CiUser, CiShop } from "react-icons/ci";
+import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 
 import { navLinks } from "../../constants/constants";
 
@@ -53,11 +53,11 @@ const Item = styled.li`
 
 const Icons = styled.div`
     display: flex;
-    gap: 1.6rem;
+    gap: 2rem;
 `;
 
 const Icon = styled.div`
-    font-size: ${(props) => props.theme.fontSizes.headings.s6};
+    font-size: ${(props) => props.theme.fontSizes.body.b1};
     display: flex;
     cursor: pointer;
 
@@ -112,14 +112,14 @@ const Navbar = () => {
 
             <Icons>
                 <Icon>
-                    <CiSearch />
+                    <FaSearch />
                 </Icon>
                 <Icon>
-                    <CiUser />
+                    <FaUser />
                 </Icon>
                 <Icon>
                     <Cart>
-                        <CiShop />
+                        <FaShoppingCart />
                         <Span>0</Span>
                     </Cart>
                 </Icon>
