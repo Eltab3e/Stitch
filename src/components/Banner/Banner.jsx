@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { FaArrowRight } from "react-icons/fa6";
 
 import placeholder from "../../assets/placeholder.png";
 import placeholder2 from "../../assets/placeholder2.png";
 import placeholder3 from "../../assets/placeholder3.png";
+
+import Button from "../Shared/Button/Button";
 
 const Container = styled.div`
     display: grid;
@@ -31,18 +32,6 @@ const MainCardContent = styled.div`
 const Title = styled.h5`
     font-size: ${(props) => props.theme.fontSizes.headings.s5};
     font-family: "Poppins", sans-serif;
-`;
-
-const Button = styled.button`
-    width: 10rem;
-    height: 2.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: inherit;
-    border: none;
-    border-bottom: 1px solid #000000;
-    cursor: pointer;
 `;
 
 const Text = styled.p`
@@ -87,11 +76,7 @@ const Banner = () => {
             <MainCard>
                 <MainCardContent>
                     <Title>Living Room</Title>
-
-                    <Button>
-                        <Text>Shop Now</Text>
-                        <FaArrowRight />
-                    </Button>
+                    <Button>Shop Now</Button>
                 </MainCardContent>
             </MainCard>
 
@@ -99,22 +84,14 @@ const Banner = () => {
                 <TopCard>
                     <SubCardContent>
                         <Title>Bedroom</Title>
-
-                        <Button>
-                            <Text>Shop Now</Text>
-                            <FaArrowRight />
-                        </Button>
+                        <Button>Shop Now</Button>
                     </SubCardContent>
                 </TopCard>
 
                 <BottomCard>
                     <SubCardContent>
                         <Title>Kitchen</Title>
-
-                        <Button>
-                            <Text>Shop Now</Text>
-                            <FaArrowRight />
-                        </Button>
+                        <Button>Shop Now</Button>
                     </SubCardContent>
                 </BottomCard>
             </SubCards>

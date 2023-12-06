@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 
-import { navLinks } from "../../constants/constants";
+import { navLinks } from "../../../constants/constants";
 
 const Container = styled.div`
     background-color: ${(props) => props.theme.colors.primary.black};

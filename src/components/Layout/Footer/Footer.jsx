@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoYoutube } from "react-icons/io5";
 
-import { navLinks } from "../../constants/constants";
+import { navLinks } from "../../../constants/constants";
 
 const Container = styled.footer`
     background-color: ${(props) => props.theme.colors.primary.black};
