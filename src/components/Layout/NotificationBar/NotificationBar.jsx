@@ -32,7 +32,7 @@ const Icon = styled.div`
     }
 `;
 
-const Notification = () => {
+const NotificationBar = () => {
     const [isOpen, setIsOpen] = useState(true);
 
     const handleHide = () => {
@@ -50,4 +50,4 @@ const Notification = () => {
     );
 };
 
-export default Notification;
+export default NotificationBar;
