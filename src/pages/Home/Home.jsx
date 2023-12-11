@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import { Slider, Banner, Slogan, NewArrival, Values } from "../../components/index";
+import { Slider, Banner, Slogan, NewArrival, Values, Highlight } from "../../components/index";
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
 `;
 
 const Home = () => {
@@ -16,6 +16,7 @@ const Home = () => {
             <Banner />
             <NewArrival />
             <Values />
+            <Highlight />
         </Container>
     );
 };

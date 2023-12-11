@@ -8,5 +8,6 @@ import Slogan from "./Slogan/Slogan";
 import Banner from "./Banner/Banner";
 import NewArrival from "./NewArrival/NewArrival";
 import Values from "./Values/Values";
+import Highlight from "./Highlight/Highlight";
 
-export { NotificationBar, Navbar, Footer, Slider, Slogan, Banner, NewArrival, Values };
+export { NotificationBar, Navbar, Footer, Slider, Slogan, Banner, NewArrival, Values, Highlight };

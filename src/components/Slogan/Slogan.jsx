@@ -4,7 +4,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16rem;
+    padding: 0 22rem;
 `;
 
 const Main = styled.div``;

@@ -6,7 +6,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4.8rem 16rem;
+    padding: 0 22rem;
 `;
 
 const Card = styled.div`
@@ -31,6 +31,7 @@ const Text = styled.div`
 
 const Title = styled.h4`
     font-size: ${(props) => props.theme.fontSizes.headings.s7};
+    font-weight: 500;
 `;
 
 const Caption = styled.p`
@@ -55,8 +56,8 @@ const Values = () => {
                     <FaMoneyBill />
                 </Icon>
                 <Text>
-                    <Title>Free Shipping</Title>
-                    <Caption>Orders above $200</Caption>
+                    <Title>Money-back</Title>
+                    <Caption>30 days gurantee</Caption>
                 </Text>
             </Card>
             <Card>
@@ -64,8 +65,8 @@ const Values = () => {
                     <FaLock />
                 </Icon>
                 <Text>
-                    <Title>Free Shipping</Title>
-                    <Caption>Orders above $200</Caption>
+                    <Title>Secure Payments</Title>
+                    <Caption>Secured by Stripe</Caption>
                 </Text>
             </Card>
             <Card>
@@ -73,8 +74,8 @@ const Values = () => {
                     <BsFillTelephoneFill />
                 </Icon>
                 <Text>
-                    <Title>Free Shipping</Title>
-                    <Caption>Orders above $200</Caption>
+                    <Title>24/7 Support</Title>
+                    <Caption>Phone and Email support</Caption>
                 </Text>
             </Card>
         </Container>

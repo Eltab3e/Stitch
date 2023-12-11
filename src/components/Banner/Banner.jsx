@@ -9,9 +9,8 @@ import Button from "../Shared/Button/Button";
 const Container = styled.div`
     display: grid;
     align-items: center;
-    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 16rem;
+    padding: 0 22rem;
 `;
 
 const MainCard = styled.div`
